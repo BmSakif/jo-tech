@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #2e2d2a;
+  --color-light: #e3e1da;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --radius-50: 50px;
+}
+
+/* Enable class-based dark mode in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply bg-light text-dark dark:bg-dark dark:text-light transition-colors duration-500;
+}
+
+/* Custom smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection colors */
+::selection {
+  @apply bg-dark/10 dark:bg-light/10;
+}

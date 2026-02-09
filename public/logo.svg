@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#0F172A" />
+  <path d="M160 180H352" stroke="white" stroke-width="40" stroke-linecap="round" />
+  <path d="M352 180V300C352 344.183 316.183 380 272 380C227.817 380 192 344.183 192 300V290" stroke="url(#brandGradient)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <circle cx="352" cy="180" r="16" fill="#2DD4BF" />
+</svg>
